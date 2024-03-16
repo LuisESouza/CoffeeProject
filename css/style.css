@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /*Cores*/
+    --bg-color-bodyText: #FEF7EE;
+    --bg-color-bodyBackground: #111315;
+    --font-color-bodyText: var(--bg-color-bodyText);
+    --font-color-bodyBackground: var(--bg-color-bodyBackground);
+    
+    --bg-color-main: #1B1D1F;
+    --font-color-coffeeVote: #6F757C;
+    --bg-color-coffeeVote: #6F757C;
+    --bg-color-coffeeHover: rgba(255, 255, 255, 0.4);
+    --bg-color-coffeeLinkHover: var(--bg-color-coffeeVote);
+    
+    --bg-color-coffeeInfo: #BEE3CC;
+    --font-color-coffeePrice: black;
+    --bg-color-textoTeste: #F6C768;
+    --font-color-textoTeste: #1B1D1F;
+
+    /*Font Family*/
+    --font-family: 'DM Sans', sans-serif;
+
+    /*Sizes*/
+    --font-size-base: 1rem;
+    --font-size-h1: 2rem;
+    --font-size-h2: 0.875rem;
+    --font-size-small: 0.625rem;
+
+    /*Margins e Padding*/
+    --padding-small: .7%;
+    --margin-top-large: 50px;
+    --margin-bottom-medium: 4%;
+}
+
+
+/*Body*/
+body {
+    color: var(--font-color-bodyText);
+    background-color: var(--font-color-bodyBackground);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family);
+}
+
+/*Main*/
+.main {
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: var(--bg-color-main);
+    position: relative;
+    width: 85%;
+    border-radius: 1rem;
+    bottom: 120px;
+    padding: 1%;
+}
+
+.main h1 {
+    font-size: var(--font-size-h1);
+}
+
+.main h2 {
+    color: var(--font-color-coffeeVote);
+    margin-bottom: 20px;
+    font-size: var(--font-size-h2);
+}
+
+
+.cabecalho img {
+    width: 100%;
+    height: 250px;
+}
+
+.top-container{
+    padding: 2rem;
+    margin-bottom: -4rem;
+}
+
+.text-top {
+    margin-top: 2rem;
+    margin: auto;
+    width: 65%;
+    font-size: var(--font-size-h2);
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+.links-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.product-link {
+    background-color: transparent;
+    color: var(--font-color-bodyText);
+    text-decoration: none;
+    padding: 0.7rem;
+    border-radius: 15px;
+}
+
+.product-link:hover {
+    background-color: var(--bg-color-coffeeLinkHover);
+}
+
+.coffees-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%; 
+    margin: auto;
+    margin-bottom: var(--margin-bottom-medium);
+    margin-top: var(--margin-top-large);
+}
+
+.coffee {
+    padding: 1%;
+}
+
+.imgCoffee {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.imgCoffee:hover {
+    opacity: .4;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px var(--bg-color-coffeeHover);
+}
+
+.info-coffee {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.div-price {
+    background-color: var(--bg-color-coffeeInfo);
+    font-size: .75rem;
+    justify-self: end;
+    align-self: center;
+    border-radius: 5px;
+    width: 30%; 
+    font-weight: bold;
+    padding: 4px;
+}
+
+.price {
+    color: var(--font-color-coffeePrice);
+}
+
+.name-coffee {
+    text-align: left;
+    text-decoration: none;
+    color: var(--bg-color-bodyText);
+}
+
+.name-coffee:hover{
+    text-decoration: underline #BEE3CC 2%;
+    color: #BEE3CC;
+    cursor: pointer;
+}
+
+.avaliation-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: initial;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.testando{
+    width: 100%;
+}
+
+.avaliation-container svg {
+    margin-right: 1%;    
+}
+
+.votes {
+    font-size: var(--font-size-h2);
+    text-align: center;
+    color: var(--font-color-coffeeVote);
+}
+
+.indicator-container {
+    position: absolute; 
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: var(--font-size-small);
+    font-family: var(--font-family);
+    color: var(--font-color-textoTeste);
+    padding: .2rem;
+    margin: .3rem;
+    font-weight: bold;
+
+    gap: 5px;
+}   
+
+.popular-indicator{
+    padding: .4rem;
+    border-radius: 15px;
+    background-color: var(--bg-color-textoTeste);
+}
+
+.soldOut-indicator{
+    padding: .4rem;
+    border-radius: 15px;
+    background-color: #ED735D;
+}
+
+/*TRABET*/
+@media screen and (max-width: 1024px){
+    .coffees-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5%; 
+        margin: auto;
+        margin-bottom: 100px;
+        margin-top: var(--margin-top-large);    
+    }
+
+    .coffee img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+}
+
+/*CELULAR*/
+@media screen and (max-width: 640px) {
+    
+    .top-container{
+        margin-bottom: -2rem;
+    }
+
+    .product-link {
+        background-color: transparent;
+        color: var(--font-color-bodyText);
+        text-decoration: none;
+        padding: 2%;
+        border-radius: 5px;
+    }
+
+    .coffees-container{
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 4%;           
+    }
+
+    .coffee img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+}
