@@ -1,2 +1,2 @@
 .gitattributes
-.css linguist-detectable=falso
+.css linguist-detectable=true
